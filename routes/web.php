@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\UserController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//route view
+Route::view('/about','about');
+Route::view('/cart','cart');
+Route::view('/checkout','checkout');
+Route::view('/contact-us','contact-us');
+Route::view('/gallery','gallery');
+Route::view('/my-account','my-account');
+Route::view('/shop-detail','shop-detail');
+Route::view('/shop','shop');
+Route::view('/wishlist','wishlist');
